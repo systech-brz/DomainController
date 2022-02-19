@@ -18,7 +18,7 @@ Testado e homologado no Firewall NG UTM Netgate pfSense 2.5.x
 # SEGUNDA ETAPA: Criação e Configuração da Máquina Virtual no PROXMOX
 01. Criar Maquina Virtual;
 	GERAL
-		VM ID: 				200
+		VM ID: 				100
 		nome:				pfSense
 	SO 	
 		não usar qualquer midia
