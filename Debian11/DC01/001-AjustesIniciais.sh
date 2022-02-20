@@ -37,6 +37,11 @@ ip add flush dev ens18
 ifdown ens18
 ifup ens18
 
+
+apt-get install openssh-server
+systemctl enable ssh
+systemctl start ssh
+
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 	/etc/init.d/ssh restart
 
