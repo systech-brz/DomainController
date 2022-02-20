@@ -47,10 +47,10 @@ echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 	apt update													<ENTER>
 	apt -y install bridge-utils ifenslave net-tools vim			<ENTER>
 	apt -y upgrade												<ENTER>
-	apt -y dist-upgrade											<ENTER>
-	apt -y full-upgrade											<ENTER>
-	apt -y autoremove											<ENTER>
-	apt -y autoclean 
+	apt dist-upgrade											<ENTER>
+	apt full-upgrade											<ENTER>
+	apt autoremove											<ENTER>
+	apt autoclean 
 	
 
 
@@ -122,10 +122,7 @@ reboot
 ################################################################
 ####														####
 ####			INSTALACAO DO SAMBA 4			     		####
-####            		HOSTNAME 			          		####
-####            		HOSTS				          		####
-####            		RESOLV.CONF			          		####
-####            		NSSWITCH.CONF		          		####
+####														####
 ####														####
 ################################################################
 ################################################################
