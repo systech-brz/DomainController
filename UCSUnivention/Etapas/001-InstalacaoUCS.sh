@@ -231,6 +231,13 @@ Quarta Etapa: Instalando o UCS Univention 5.0.x Core Free
 03. Reboot
 		reboot <Enter>
 
+04. Usando o Comando APT
+		apt update
+		apt upgrade
+		apt -y autoremove
+		apt autoclean
+		reboot <Enter>
+
 
 
 
