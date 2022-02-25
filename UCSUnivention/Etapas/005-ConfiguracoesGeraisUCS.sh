@@ -43,7 +43,7 @@ essa configuração utilizando o Terminal e Editor de Texto vim
 
 Segunda etapa: Configurações Gerais do Servidor UCS
 01. Acessar o WebManagement (recomendado utilizar o navegado Firefox)
-		https://172.16.1.10
+		https://173.169.73.1
 
 02. System and Domain Manager
 		Username: administrator
@@ -52,10 +52,10 @@ Segunda etapa: Configurações Gerais do Servidor UCS
 03. Univention Management Console (Configuração do Objeto do Servidor)
 		Device
 			Computers
-				ptispo01dc01
+				UCS-DC-01
 					Basic settings
 						Computer account
-							Directory Node name: ptispo01dc01
+							Directory Node name: UCS-DC-01
 							Description: Servidor de Nó do Diretório Primário
 							Inventory number: 123456
 					Save
@@ -67,16 +67,16 @@ Segunda etapa: Configurações Gerais do Servidor UCS
 					Basic settings
 						General networks settings
 							Name: default
-							Networks: 172.16.1.0
+							Networks: 173.169.73.0
 							Netmask: 24
 							IP Address range
-								First address: 172.16.1.1
-								Last address: 172.16.1.254
+								First address: 173.169.73.1
+								Last address: 173.169.73.254
 						DNS preferences
-							DNS forward lookup zone: pti.intra 
-							DNS reverse lookup zone: 172.16.1
+							DNS forward lookup zone: systech.brz 
+							DNS reverse lookup zone: 173.169.73
 						DHCP preferences
-							DHCP service: pti.intra
+							DHCP service: systech.brz
 					Save
 
 05. Univention Management Console (Configuração de Linguagem do Servidor)
