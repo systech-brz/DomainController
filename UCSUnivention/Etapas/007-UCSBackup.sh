@@ -153,12 +153,12 @@ Quarta Etapa: Configuração o UCS Univention 5.0.x Core Free
 03. Domain join information
 		[Select] Start join at the end of the installation
 		[Select] Search Primary Directory Node in DNS
-		Hostname of the Primary Directory Node: ptispo01dc01.pti.intra
+		Hostname of the Primary Directory Node: UCS-DC-01.systech.brz
 		Username: administrator
 		Password: pti@2018
 		<Next>
 04. Host settings
-		Specify the name of this system: ptispo01dc02.pti.intra
+		Specify the name of this system: UCS-Backup.systech.brz
 		<Next>
 05. Confirm configuration settings
 		[Disable] Update system after setup
@@ -173,20 +173,26 @@ Quinta etapa: Atualizando o UCS Univention 5.0.x Core Free
 02. Upgrade
 		univention-upgrade <Enter>
 		Do you want to continue [Y|N]? Y <Enter>
-03. Reboot
-		reboot <Enter>
+03. Apt
+		apt update <Enter>
+		apt upgrade <Enter>
+		apt autoremove
+			Do you want to continue [Y|N]? Y <Enter>
+		apt autoclean <Enter>
+		
+04. reboot <Enter>
 
 Sexta etapa: Acessando o WebManagement do UCS Univention
 01. Acessar o WebManagement (recomendado utilizar o navegado Firefox)
-		https://ptispo01dc01.pti.intra
+		https://UCS-DC-01.systech.brz
 		Avançado
 		Aceitar o risco e continuar
 02. Server overview
 		Username: administrator
 		Password: pti@2018
 03. Acessando os servidores remotamente
-		https://ptispo01dc01.pti.intra
-		https://ptispo01dc02.pti.intra
+		https://UCS-DC-01.systech.brz
+		https://UCS-Backup.systech.brz
 
 Sétima etapa: Reconfiguração dos Principais Serviços de Rede
 01. Configuração da Rede no Servidor Backup
@@ -210,7 +216,7 @@ Sétima etapa: Reconfiguração dos Principais Serviços de Rede
 03. Configuração do Serviço de DHCP no Servidor Primário
 	Domain
 		DHCP
-			pti.intra
+			systech.brz
 				172.16.1.0 (Subnet)
 					Policies
 						Policy: DHCP DNS
@@ -227,7 +233,7 @@ Sétima etapa: Reconfiguração dos Principais Serviços de Rede
 			Active Directory-Compatible Domain Controller
 				Manage Installations
 					Install 
-						Host for installation of App: ptispo01dc02.pti.intra
+						Host for installation of App: UCS-Backup.systech.brz
 						Continue
 						Start Installation
 
@@ -237,5 +243,5 @@ Sétima etapa: Reconfiguração dos Principais Serviços de Rede
 			ipconfig /release
 			ipconfig /renew
 			ipconfig /all
-			nslookup pti.intra
-			ping pti.intra
+			nslookup systech.brz
+			ping systech.brz
